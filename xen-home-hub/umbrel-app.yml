@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: xen-home-hub
+category: automation
+name: Home Hub
+version: "0.1.0"
+tagline: Lumières Hue, lave-linge/sèche-linge et NAS sur un seul écran
+description: >-
+  Dashboard maison en Rust : pilote les lumières Philips Hue, affiche les boutons Hue
+  et les machines Hisense ConnectLife via Home Assistant, et les stats/apps de l'Umbrel.
+developer: xen
+website: ""
+repo: ""
+support: ""
+port: 3838
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+dependencies:
+  - home-assistant
+releaseNotes: ""
+submitter: xen
+submission: ""
