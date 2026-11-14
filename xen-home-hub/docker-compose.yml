@@ -10,6 +10,10 @@ services:
     # Image publiée par : docker build -t ghcr.io/xenox/home-hub:VERSION . && docker push ghcr.io/xenox/home-hub:VERSION
     image: ghcr.io/xenox/home-hub:0.2.0@sha256:bb780d2a4c359145077db7e4d0e48e7288bf52acaeba092fc284c25081176ffc
     restart: on-failure
+    # Accès direct, sans la connexion Umbrel, joignable uniquement depuis l'Umbrel lui-même :
+    # c'est la cible de `tailscale serve` (la connexion Umbrel ne fonctionne pas derrière HTTPS).
+    ports:
+      - "127.0.0.1:38380:3000"
     volumes:
       - ${APP_DATA_DIR}/data:/data
     environment:
