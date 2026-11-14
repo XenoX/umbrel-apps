@@ -8,7 +8,7 @@ services:
 
   web:
     # Image publiée par : docker build -t ghcr.io/xenox/home-hub:VERSION . && docker push ghcr.io/xenox/home-hub:VERSION
-    image: ghcr.io/xenox/home-hub:0.2.0@sha256:bb780d2a4c359145077db7e4d0e48e7288bf52acaeba092fc284c25081176ffc
+    image: ghcr.io/xenox/home-hub:0.3.0@sha256:8bd69ca3e72fe3e57ca1c9b661df34fb63983aa8742ea6e9024f12f044ce613d
     restart: on-failure
     # Accès direct, sans la connexion Umbrel, joignable uniquement depuis l'Umbrel lui-même :
     # c'est la cible de `tailscale serve` (la connexion Umbrel ne fonctionne pas derrière HTTPS).
@@ -18,3 +18,7 @@ services:
       - ${APP_DATA_DIR}/data:/data
     environment:
       CONFIG_FILE: /data/config.toml
+      # Apps publiées en HTTPS par `tailscale serve` sur leur port habituel.
+      HTTPS_APPS: jellyfin,nextcloud
+      # Liste Home Assistant affichée dans « Courses » (synchronisée avec Google Keep).
+      SHOPPING_LIST: todo.google_keep_courses
