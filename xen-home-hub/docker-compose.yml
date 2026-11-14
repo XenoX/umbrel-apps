@@ -8,7 +8,7 @@ services:
 
   web:
     # Image publiée par : docker build -t ghcr.io/xenox/home-hub:VERSION . && docker push ghcr.io/xenox/home-hub:VERSION
-    image: ghcr.io/xenox/home-hub:0.1.0@sha256:7d89e0d6d2987dc344aae18bc070e1018224d258b464dae87dc46b54b1c3d25b
+    image: ghcr.io/xenox/home-hub:0.2.0@sha256:bb780d2a4c359145077db7e4d0e48e7288bf52acaeba092fc284c25081176ffc
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data:/data
