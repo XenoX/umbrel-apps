@@ -2,7 +2,7 @@ manifestVersion: 1
 id: xen-home-hub
 category: automation
 name: Home Hub
-version: "0.4.0"
+version: "0.5.0"
 tagline: Lumières Hue, lave-linge/sèche-linge et NAS sur un seul écran
 description: >-
   Dashboard maison en Rust : pilote les lumières Philips Hue, affiche les boutons Hue
@@ -19,6 +19,6 @@ defaultUsername: ""
 defaultPassword: ""
 dependencies:
   - home-assistant
-releaseNotes: "Onglets Accueil, Automatisations et Appareils ; trajets du matin et du soir réglables (jours, heures)."
+releaseNotes: "Onglet Maison : maquette 3D du rez-de-chaussée et de l'étage (lampes, barres TV, enceintes) ; nouvelles lampes, pièces et boutons pris en compte sans redémarrer."
 submitter: xen
 submission: ""
